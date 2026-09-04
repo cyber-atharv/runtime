@@ -1,10 +1,7 @@
-/**
- * FlexAssist — Lower-Limb Assistive Exoskeleton (SIH 1847)
- * Interactive Application Engine, 3D CAD Viewers, CAM Simulator & Biomechanics
- */
+// FlexAssist - Lower-Limb Assistive Exoskeleton
+// Frontend interactions, 3D viewers, CAM simulation & biomechanics engine
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize all subsystems
   initAudioSystem();
   initThemeAndNav();
   initGallerySystem();
@@ -18,9 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStatCounters();
 });
 
-/* ==========================================================================
-   1. WEB AUDIO API SYNTHESIZER (Medical UI Acoustic Feedback)
-   ========================================================================== */
+// Web Audio API feedback for UI interactions
 let audioCtx = null;
 let soundEnabled = true;
 
@@ -92,9 +87,7 @@ function initAudioSystem() {
   }
 }
 
-/* ==========================================================================
-   2. THEME, NAVIGATION & TOASTS
-   ========================================================================== */
+// Theme toggle, mobile navigation & toast notifications
 function initThemeAndNav() {
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const mobileToggleBtn = document.getElementById('mobileToggleBtn');
@@ -155,9 +148,7 @@ function showToast(msg, icon = 'fa-info-circle') {
   }, 3200);
 }
 
-/* ==========================================================================
-   3. HERO 3D KINEMATICS DIGITAL TWIN (Three.js Procedural Exoskeleton)
-   ========================================================================== */
+// Hero 3D interactive viewer (Three.js procedural rig)
 function initHero3DViewer() {
   const container = document.getElementById('hero3dContainer');
   const loader = document.getElementById('heroLoader');
@@ -405,9 +396,7 @@ function initHero3DViewer() {
   });
 }
 
-/* ==========================================================================
-   4. AUTODESK FUSION 3D CAD & EXPLODED VIEW STUDIO
-   ========================================================================== */
+// 3D CAD Studio & exploded hierarchy viewer
 function initCadStudio3DViewer() {
   const container = document.getElementById('cad3dCanvas');
   const explodeSlider = document.getElementById('cadExplodeSlider');
@@ -680,9 +669,7 @@ function initCadStudio3DViewer() {
   });
 }
 
-/* ==========================================================================
-   5. 3-AXIS CNC TOOLPATH & G-CODE SIMULATOR
-   ========================================================================== */
+// 3-Axis CNC toolpath simulation & G-code streamer
 function initCncSimulator() {
   const canvas = document.getElementById('cncCanvas');
   const gcodeBox = document.getElementById('gcodeBox');
@@ -936,9 +923,7 @@ function initCncSimulator() {
   }, 400 / simSpeed);
 }
 
-/* ==========================================================================
-   6. FEEDS & SPEEDS CALCULATOR ENGINE (Autodesk Fusion Formulae)
-   ========================================================================== */
+// Speeds & feeds calculator (Fusion 360 machining formulas)
 function initFeedsSpeedsCalc() {
   const matSelect = document.getElementById('calcMaterial');
   const diaInput = document.getElementById('calcCutterDia');
@@ -985,9 +970,7 @@ function initFeedsSpeedsCalc() {
   computeFeeds();
 }
 
-/* ==========================================================================
-   7. BIOMECHANICS & JOINT TORQUE ENGINE (Chart.js)
-   ========================================================================== */
+// Biomechanical joint torque & knee offloading analysis (Chart.js)
 function initBiomechEngine() {
   const chartCanvas = document.getElementById('biomechChart');
   const weightSlider = document.getElementById('bioWeight');
@@ -1190,9 +1173,7 @@ function initBiomechEngine() {
   updateBiomechanicalData();
 }
 
-/* ==========================================================================
-   8. PATIENT CUSTOMIZER & CLINICAL REPORT GENERATOR
-   ========================================================================== */
+// Patient fitting calculator & custom prescription report
 function initPatientCustomizer() {
   const generateBtn = document.getElementById('generateReportBtn');
   const printBtn = document.getElementById('printReportBtn');
@@ -1270,9 +1251,7 @@ function initPatientCustomizer() {
   }
 }
 
-/* ==========================================================================
-   9. CLINICAL TRIAL & DEMO BOOKING FORM
-   ========================================================================== */
+// Clinical trial demo request handler
 function initClinicalTrialForm() {
   const form = document.getElementById('trialForm');
   if (!form) return;
@@ -1298,9 +1277,7 @@ function initClinicalTrialForm() {
   });
 }
 
-/* ==========================================================================
-   10. STAT PILL NUMBER ANIMATION
-   ========================================================================== */
+// Metric counter animation
 function initStatCounters() {
   const counters = document.querySelectorAll('.stat-number');
   if (!counters.length) return;
@@ -1336,9 +1313,7 @@ function initStatCounters() {
   counters.forEach((c) => observer.observe(c));
 }
 
-/* ==========================================================================
-   11. OFFICIAL CAD GALLERY & LIGHTBOX CONTROLLER
-   ========================================================================== */
+// Gallery tab filters & lightbox modal
 function initGallerySystem() {
   const tabs = document.querySelectorAll('.gallery-tab');
   const cards = document.querySelectorAll('.gallery-card');
