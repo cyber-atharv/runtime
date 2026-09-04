@@ -31,8 +31,7 @@
 8. [Regulatory Compliance & Risk Mitigation (ISO)](#-regulatory-compliance--risk-mitigation-iso)
 9. [Authentic Project Renders & Schematics](#-authentic-project-renders--schematics)
 10. [Project Directory Structure](#-project-directory-structure)
-11. [Getting Started & GitHub Pages Deployment](#-getting-started--github-pages-deployment)
-12. [Research References](#-research-references)
+11. [Research References](#-research-references)
 
 ---
 
@@ -204,45 +203,6 @@ sih-t-2-2026/
 ├── README.md                              # Root repository documentation
 └── images/                                # Project imagery asset store
 ```
-
----
-
-## 🚀 Getting Started & GitHub Pages Deployment
-
-### 1. View Hosted Deployment
-The project is configured for instant hosting via GitHub Pages:
-- **Production URL**: [https://cyber-atharv.github.io/runtime/](https://cyber-atharv.github.io/runtime/)
-
-### 2. How to Enable GitHub Pages on Your Fork / Repo
-If deploying to your own GitHub repository:
-1. Push this code to your GitHub repository:
-   ```bash
-   git add .
-   git commit -m "feat: complete FlexAssist interactive portal & documentation"
-   git push origin main
-   ```
-2. On GitHub, navigate to your repository **Settings** tab.
-3. In the left sidebar, click on **Pages** (under *Code and automation*).
-4. Under **Build and deployment** $\rightarrow$ **Source**, choose **Deploy from a branch**.
-5. Under **Branch**, select `main` and keep the directory as `/ (root)` or `/docs` (or `/runtime` if using custom subfolder).
-6. Click **Save**. Within 1–2 minutes, GitHub Actions will publish your site at:
-   `https://<your-username>.github.io/<repo-name>/`
-
-### 3. Local Execution (Zero-Build)
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/cyber-atharv/runtime.git
-   ```
-2. Open [`runtime/index.html`](runtime/index.html) or root [`index.html`](index.html) directly in any web browser:
-   - **Windows**: Double-click `index.html` or run:
-     ```powershell
-     Start-Process "runtime\index.html"
-     ```
-   - **macOS / Linux**:
-     ```bash
-     open runtime/index.html   # macOS
-     xdg-open runtime/index.html # Linux
-     ```
 
 ---
 
